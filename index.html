@@ -3,28 +3,25 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="GameVault, a sample video game store with new and used games for PS5, Xbox, Switch and PC.">
-    <meta property="og:title" content="GameVault | New and used video games">
-    <meta property="og:description" content="A sample video game store, built with HTML and CSS.">
-    <title>GameVault | New and used video games</title>
-    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' fill='%2314171c'/><text x='16' y='23' font-size='20' font-weight='800' text-anchor='middle' fill='%23eceff1' font-family='Arial'>G</text></svg>">
+    <meta name="description" content="GameVault, a sample online video game store. Reserve new and used games for PS5, Xbox, Switch and PC.">
+    <title>Video game store | GameVault</title>
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' rx='7' fill='%231456f0'/><text x='16' y='24' font-size='22' font-weight='800' text-anchor='middle' fill='white' font-family='Arial'>G</text></svg>">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;700;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@400;600;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
 
+    <!-- Announcement -->
+    <div class="announce">Reserve online and pick up in store within two days.</div>
+
     <!-- Header -->
     <header class="site-header">
         <div class="wrap bar">
-            <a href="#" class="logo">GameVault</a>
-            <nav>
-                <a href="#shelf">Shelf</a>
-                <a href="#platforms">Platforms</a>
-                <a href="#visit">Visit</a>
-                <a href="#inventory">Inventory app</a>
-            </nav>
+            <a href="index.html" class="logo">GameVault</a>
+            <nav class="menu" aria-label="Main"><a href="index.html" aria-current="page">Home</a><a href="shop.html">Shop</a><a href="about.html">About</a><a href="about.html#contact">Contact</a></nav>
+            <a href="mailto:hello@gamevault.example" class="btn">Email us</a>
         </div>
     </header>
 
@@ -32,128 +29,88 @@
 
         <!-- Hero -->
         <section class="hero">
-            <div class="wrap">
-                <div class="hero-text">
-                    <h1>New and used games, priced on the tag.</h1>
-                    <p>Every game on the shelf shows its platform, its condition, how many copies we have and what it costs.</p>
-                    <a href="#shelf" class="btn">See the shelf</a>
+            <div class="wrap hero-grid">
+                <div>
+                    <h1>Games for every console, new and used.</h1>
+                    <p>Browse the shelf, reserve what you want and collect it at the counter. Every price is on the tag.</p>
+                    <div class="actions"><a href="shop.html" class="btn btn-lg">Shop all games</a><a href="about.html" class="btn btn-ghost">About the store</a></div>
                 </div>
-                <div class="cases" aria-hidden="true">
-                    <div class="case switch"><span>Switch</span><strong>Tears of the Kingdom</strong></div>
-                    <div class="case ps"><span>PS5</span><strong>God of War Ragnarok</strong></div>
-                    <div class="case xbox"><span>Xbox</span><strong>Forza Horizon 5</strong></div>
-                </div>
+                <div class="slot hero-img" role="img" aria-label="Store banner"><span>images/hero.jpg</span><i style="background-image:url('images/hero.jpg')"></i></div>
             </div>
         </section>
 
-        <!-- Shelf -->
-        <section id="shelf" class="block">
-            <div class="wrap">
-                <h2>On the shelf today</h2>
-                <table class="ledger">
-                    <thead>
-                        <tr>
-                            <th>Platform</th>
-                            <th>Title</th>
-                            <th>Condition</th>
-                            <th>In stock</th>
-                            <th>Price</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td><span class="tag switch">Switch</span></td>
-                            <td class="title">The Legend of Zelda: Tears of the Kingdom</td>
-                            <td>New</td>
-                            <td>8 copies</td>
-                            <td class="price">59.99 €</td>
-                        </tr>
-                        <tr>
-                            <td><span class="tag ps">PS5</span></td>
-                            <td class="title">God of War Ragnarok</td>
-                            <td>Used</td>
-                            <td><span class="low">Last 3</span></td>
-                            <td class="price">34.99 €</td>
-                        </tr>
-                        <tr>
-                            <td><span class="tag xbox">Xbox</span></td>
-                            <td class="title">Forza Horizon 5</td>
-                            <td>New</td>
-                            <td>5 copies</td>
-                            <td class="price">49.99 €</td>
-                        </tr>
-                        <tr>
-                            <td><span class="tag switch">Switch</span></td>
-                            <td class="title">Hollow Knight</td>
-                            <td>New</td>
-                            <td>5 copies</td>
-                            <td class="price">14.99 €</td>
-                        </tr>
-                        <tr>
-                            <td><span class="tag pc">PC</span></td>
-                            <td class="title">Stardew Valley</td>
-                            <td>New</td>
-                            <td><span class="low">Last 2</span></td>
-                            <td class="price">13.99 €</td>
-                        </tr>
-                    </tbody>
-                </table>
-            </div>
-        </section>
+        <!-- Ticker -->
+        <div class="ticker" aria-hidden="true"><div class="track"><span>PS5</span><span>PS4</span><span>Xbox Series</span><span>Xbox One</span><span>Switch</span><span>PC</span><span>PS5</span><span>PS4</span><span>Xbox Series</span><span>Xbox One</span><span>Switch</span><span>PC</span></div></div>
 
         <!-- Platforms -->
-        <section id="platforms" class="block">
+        <section class="block"><div class="wrap"><h2>Shop by platform</h2><div class="categories"><a href="shop.html#ps" class="category"><div class="slot wide" role="img" aria-label="PlayStation"><span>images/cat-ps.jpg</span><i style="background-image:url('images/cat-ps.jpg')"></i></div><p>PlayStation</p></a><a href="shop.html#xbox" class="category"><div class="slot wide" role="img" aria-label="Xbox"><span>images/cat-xbox.jpg</span><i style="background-image:url('images/cat-xbox.jpg')"></i></div><p>Xbox</p></a><a href="shop.html#switch" class="category"><div class="slot wide" role="img" aria-label="Nintendo Switch"><span>images/cat-switch.jpg</span><i style="background-image:url('images/cat-switch.jpg')"></i></div><p>Nintendo Switch</p></a><a href="shop.html#pc" class="category"><div class="slot wide" role="img" aria-label="PC"><span>images/cat-pc.jpg</span><i style="background-image:url('images/cat-pc.jpg')"></i></div><p>PC</p></a></div></div></section>
+
+        <!-- New arrivals -->
+        <section class="block">
             <div class="wrap">
-                <h2>Platforms we stock</h2>
-                <ul class="platforms">
-                    <li class="tag ps">PS5</li>
-                    <li class="tag ps">PS4</li>
-                    <li class="tag xbox">Xbox Series</li>
-                    <li class="tag xbox">Xbox One</li>
-                    <li class="tag switch">Switch</li>
-                    <li class="tag pc">PC</li>
-                </ul>
-            </div>
-        </section>
-
-        <!-- Visit -->
-        <section id="visit" class="block">
-            <div class="wrap visit-grid">
-                <div>
-                    <h2>Opening hours</h2>
-                    <dl class="hours">
-                        <dt>Monday to Friday</dt>
-                        <dd>10:00 to 19:00</dd>
-                        <dt>Saturday</dt>
-                        <dd>10:00 to 17:00</dd>
-                        <dt>Sunday</dt>
-                        <dd>Closed</dd>
-                    </dl>
+                <h2>New arrivals</h2>
+                <div class="products">
+                    <article class="product">
+                        <div class="slot tall" role="img" aria-label="The Legend of Zelda: Tears of the Kingdom cover"><span>images/zelda.jpg</span><i style="background-image:url('images/zelda.jpg')"></i><b class="badge new">New</b></div>
+                        <div class="info"><p class="platform">Switch</p><h3><a href="zelda.html">The Legend of Zelda: Tears of the Kingdom</a></h3><p class="price">59.99 €</p><p class="stock">8 in stock</p></div>
+                    </article><article class="product">
+                        <div class="slot tall" role="img" aria-label="God of War Ragnarok cover"><span>images/god-of-war.jpg</span><i style="background-image:url('images/god-of-war.jpg')"></i><b class="badge used">Used</b></div>
+                        <div class="info"><p class="platform">PS5</p><h3><a href="god-of-war.html">God of War Ragnarok</a></h3><p class="price">34.99 €</p><p class="stock low">Only 3 left</p></div>
+                    </article><article class="product">
+                        <div class="slot tall" role="img" aria-label="Forza Horizon 5 cover"><span>images/forza.jpg</span><i style="background-image:url('images/forza.jpg')"></i><b class="badge new">New</b></div>
+                        <div class="info"><p class="platform">Xbox</p><h3><a href="forza.html">Forza Horizon 5</a></h3><p class="price">49.99 €</p><p class="stock">5 in stock</p></div>
+                    </article><article class="product">
+                        <div class="slot tall" role="img" aria-label="Hollow Knight cover"><span>images/hollow-knight.jpg</span><i style="background-image:url('images/hollow-knight.jpg')"></i><b class="badge new">New</b></div>
+                        <div class="info"><p class="platform">Switch</p><h3><a href="hollow-knight.html">Hollow Knight</a></h3><p class="price">14.99 €</p><p class="stock">5 in stock</p></div>
+                    </article><article class="product">
+                        <div class="slot tall" role="img" aria-label="Stardew Valley cover"><span>images/stardew.jpg</span><i style="background-image:url('images/stardew.jpg')"></i><b class="badge new">New</b></div>
+                        <div class="info"><p class="platform">PC</p><h3><a href="stardew.html">Stardew Valley</a></h3><p class="price">13.99 €</p><p class="stock low">Only 2 left</p></div>
+                    </article><article class="product">
+                        <div class="slot tall" role="img" aria-label="Elden Ring cover"><span>images/elden-ring.jpg</span><i style="background-image:url('images/elden-ring.jpg')"></i><b class="badge used">Used</b></div>
+                        <div class="info"><p class="platform">PS5</p><h3><a href="elden-ring.html">Elden Ring</a></h3><p class="price">29.99 €</p><p class="stock">4 in stock</p></div>
+                    </article><article class="product">
+                        <div class="slot tall" role="img" aria-label="Hades cover"><span>images/hades.jpg</span><i style="background-image:url('images/hades.jpg')"></i><b class="badge new">New</b></div>
+                        <div class="info"><p class="platform">Switch</p><h3><a href="hades.html">Hades</a></h3><p class="price">24.99 €</p><p class="stock">6 in stock</p></div>
+                    </article><article class="product">
+                        <div class="slot tall" role="img" aria-label="Halo Infinite cover"><span>images/halo.jpg</span><i style="background-image:url('images/halo.jpg')"></i><b class="badge used">Used</b></div>
+                        <div class="info"><p class="platform">Xbox</p><h3><a href="halo.html">Halo Infinite</a></h3><p class="price">19.99 €</p><p class="stock low">Only 3 left</p></div>
+                    </article>
                 </div>
+                <p style="margin-top:var(--s4)"><a href="shop.html" class="btn">See all 12 games</a></p>
+            </div>
+        </section>
+
+        <!-- Why GameVault -->
+        <section class="block">
+            <div class="wrap info-grid">
                 <div>
-                    <h2>Reserve a game</h2>
-                    <p class="note">Send us the title, the platform and whether you want it new or used. We keep it at the counter for two days.</p>
-                    <a href="mailto:hello@gamevault.example" class="btn">hello@gamevault.example</a>
+                    <h2>Why shop at GameVault</h2>
+                    <ul class="facts">
+                        <li><strong>Prices on the tag</strong>What you see on the shelf is what you pay at the counter.</li>
+                        <li><strong>Used games, checked</strong>Every used disc and cartridge is tested before it is shelved.</li>
+                        <li><strong>Reserve, then collect</strong>Set a copy aside online and pay in store within two days.</li>
+                    </ul>
                 </div>
+                <div class="slot store-img" role="img" aria-label="Inside the store"><span>images/store.jpg</span><i style="background-image:url('images/store.jpg')"></i></div>
             </div>
         </section>
 
-        <!-- Inventory app -->
-        <section id="inventory" class="dark">
-            <div class="wrap">
-                <h2>How the stock is counted</h2>
-                <p>The numbers above come from GameVault, a Windows desktop app I wrote in C# with Windows Forms and MySQL. It adds, edits, sells and deletes games, flags titles with fewer than three copies, and adds up the value of everything on the shelf.</p>
-                <a href="https://github.com/YOUR_USERNAME/GameVault" class="btn btn-light">View the code on GitHub</a>
+        <!-- Call to action -->
+        <section class="about">
+            <div class="wrap about-grid">
+                <div><h2>Found something you like?</h2><p>Open the game page, press Reserve and send the email. We keep it at the counter for you.</p></div>
+                <a href="shop.html" class="btn btn-light">Browse the shop</a>
             </div>
         </section>
-
     </main>
 
     <!-- Footer -->
     <footer class="site-footer">
-        <div class="wrap">
-            <p>GameVault is a fictional store built for a portfolio. Games, prices, hours and contact details are sample data.</p>
+        <div class="wrap foot">
+            <p>© 2026 GameVault. Fictional store built for a portfolio.</p>
+            <nav aria-label="Footer"><a href="shop.html">Shop</a><a href="about.html">About</a><a href="mailto:hello@gamevault.example">hello@gamevault.example</a></nav>
         </div>
     </footer>
+
 </body>
 </html>
