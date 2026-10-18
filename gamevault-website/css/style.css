@@ -211,3 +211,8 @@ h2 { font-size: 1.7rem; font-weight: 800; margin-bottom: var(--s3); }
 .foot nav { display: flex; gap: var(--s3); }
 @media (max-width: 1000px) { .detail, .contact-grid { grid-template-columns: 1fr; gap: var(--s4); } }
 @media (max-width: 720px) { .bar .menu { grid-column: 1 / -1; grid-row: 2; justify-self: start; flex-wrap: wrap; } }
+
+/* Category logos */
+.category .slot { background: #fff; }
+.category .slot i { inset: var(--s2); background-size: contain; background-repeat: no-repeat; background-position: center; }
+.category .slot span { display: none; }
